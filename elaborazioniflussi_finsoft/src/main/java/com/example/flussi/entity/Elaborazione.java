@@ -32,7 +32,7 @@ public class Elaborazione implements Serializable {
 	private int id;
 
 	@Column(name = "data_ora")
-	@JsonFormat(pattern="dd/MM/yyyy")
+	@JsonFormat(pattern="yyyy/MM/dd")
 	private Date data;
 
 	@Column(name = "utente")

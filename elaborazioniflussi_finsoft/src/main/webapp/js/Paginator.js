@@ -1,3 +1,4 @@
+
 /**
  * page
  * count
@@ -8,7 +9,7 @@ export default class Paginator {
 	constructor(properties) {
 		this.prop = properties;
 		this.current = 1;
-		this.page = this.prop.count;
+		this.page = this.prop.page;
 		this.count = this.prop.count;
 		this.lastPage = this._lastPage();
 		
@@ -24,7 +25,7 @@ export default class Paginator {
 	
 	_lastPage (){
 		let p = Math.floor(this.count / this.page);
-		return this.count % this.page !== 0 ? p +1 : p;
+		return this.count % this.page !== 0 ? p + 1 : p;
 	}
 	
 	_create (){
@@ -51,8 +52,8 @@ export default class Paginator {
 	_checkButtons(){
 		this.first.classList.toggle("pure-button-disabled", this.current ==1);
 		this.prev.classList.toggle("pure-button-disabled", this.current ==1);
-		this.prev.classList.toggle("pure-button-disabled", this.current == this.lastPage);
-		this.prev.classList.toggle("pure-button-disabled", this.current == this.lastPage);
+		this.next.classList.toggle("pure-button-disabled", this.current == this.lastPage);
+		this.last.classList.toggle("pure-button-disabled", this.current == this.lastPage);
 	}
 	_onFirst (){
 		this.current = 1;

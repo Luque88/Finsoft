@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,21 +20,34 @@
 	<br>
 	<form class= "pre-form">
 		<fieldset>
-			<legend>Inserisci Elaborazione</legend>
+			<legend>Elaborazioni</legend>
 			<label for="id">Id:</label>
 			<input type= "text" id="id">
 			
 			<label for ="data_ora">Data:</label>
-			<input type = "text" id="data_ora">
+			<input type = "date" id="data_ora">
 			
 			<label for="utente">Utente:</label>
 			<input type = "text" id="utente">
 			
 			<input type="button" class="pure-button pure-button-primary"
-					id="b_modElaborazione" value="Conferma modifica"> <br>
+					id="b_modElaborazione" value="Inserisci"> <br>
 		</fieldset>
 	</form>
+	<div id="miaTabella1"></div>
 </article>
- <script src="./indexElaborazione.js" type="module"></script> 
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+ <script src="js/indexElaborazione.js" type="module"></script> 
+ <script src="js/DisegnaTabella.js" type="text/javascript"></script>
 </body>
 </html>

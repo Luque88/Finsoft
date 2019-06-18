@@ -32,7 +32,8 @@ public class FlussoVersione implements Serializable {
 	private int id;
 
 	@Column(name = "data_rif")
-	@JsonFormat(pattern="dd/MM/yyyy")
+	//@JsonFormat(pattern="dd/MM/yyyy")
+	@JsonFormat(pattern="yyyy/MM/dd")
 	private Date data;
 
 	@Column(name = "versione")
