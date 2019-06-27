@@ -1,80 +1,74 @@
-//caricaFlusso();
+//import FlussoService from './FlussoService.js';
+//import Tabella from "./DisegnaTabella.js";
 //
-//function caricaFlusso() {
-//    
-//   document.querySelector("#b_insFlussi").innerHTML = "";
-//    
-//    let opt = document.createElement("option");
-//    opt.innerHTML = "Scegli il record da inserire";
-//    opt.value = -1;
-//    document.querySelector("#b_insFlussi").append(opt);
-//
-//    jsonFlussi.forEach((flusso, j) => {
-//        let opt = document.createElement("option");
-//        opt.innerHTML = flusso.id + " --> " + flusso.flusso + " - ";
-//        opt.value = j;
-//        opt.setAttribute("flusso", flusso.flusso);
-//        opt.setAttribute("idFlusso", flusso.id); 
-//        document.querySelector("#b_insFlussi").append(opt);
-//
-//    })
+//class App {
+//    constructor() {
 //
 //
+//        this.onCreate = this.onCreate.bind(this);
+//        this.onUpdate = this.onUpdate.bind(this);
+//        this.onDelete = this.onDelete.bind(this);
+//        this.onSave = this.onSave.bind(this);
+//
+//        this.operationReq = '';
+//        this.id = document.querySelector("#id");
+//        this.tabella = document.querySelector("#tabella");
+//        this.bSave = document.querySelector("#b_insFlusso");
+//        this.bSave.onclick = this.onSave;
+//        this.service = new FlussoService();
+//        this.tb = new Tabella({
+//            titolo: "Elenco FLUSSI",
+//            service: this.service,
+//            idTabella: "tblFlussi",
+//            classeTabella: "pure-table table-select",
+//            contenitore: "#contenitore",
+//            page: 6,
+//            callbackCreate: this.onCreate,
+//            callbackUpdate: this.onUpdate,
+//            callbackDelete: this.onDelete
+//        });
+//
+//    }
+//
+//    onCreate() {
+//        this.operationReq = "CREATE";
+//        this.id.value = "";
+//        this.tabella.value = "";
+//    }
+//
+//    onUpdate(url) {
+//        this.operationReq = "UPDATE";
+//        this.url = url;
+//        this.service.find(url).then(json => {
+//            this.id.value = json.id;
+//            this.tabella.value = json.tabella;
+//        });
+//    }
+//
+//    onDelete(url) {
+//        this.operationReq = "DELETE";
+//        this.service.delete(url);
+//        this.tb.reloadData();
+//    }
+//
+//    onSave() {
+//        if (this.operationReq === "CREATE") {
+//            this.service.create({
+//                id: this.id.value,
+//                tabella: this.tabella.value
+//            });
+//        } else {
+//            this.service.update(this.url, {
+//                id: this.id.value,
+//                tabella: this.tabella.value
+//            });
+//        }
+//        this.tb.reloadData();
+//    }
 //}
 //
-//
-//
-//document.querySelector("#b_insFlussi").onchange = function () {
-//
-//    let indiceOpzione = document.querySelector("#b_insFlussi").selectedIndex
-//    let opzioneSelezionata = document.querySelector("#b_insFlussi").options[indiceOpzione]
-//
-//    let value = opzioneSelezionata.value;
-//    let idFlusso = jsonFlussi[value].id;
-//    let tabella = jsonFlussi[value].tabella;
-//    
-//    document.querySelector("#flusso").value = flusso;
-//    document.querySelector("#tabella").value = tabella;
-//    console.log(idFlusso, tabella, flusso);
-//}
-//
-//
-//
-//document.querySelector("#b_elimFlusso").onclick = function (e) {
-//    console.log("click su modifica flusso")
-//
-//    let indiceOpzione = document.querySelector("#b_insFlussi").selectedIndex
-//    let opzioneSelezionata = document.querySelector("#b_insFlussi").options[indiceOpzione]
-//
-//    let value = opzioneSelezionata.value
-//
-//    let idFlusso = jsonFlussi[value].id
-//
-//    let obj = {}
-//
-//    obj.id = document.querySelector("#id").value
-//    obj.tabella = document.querySelector("#tabella").value
-//
-//    console.log("invio", obj)
-//
-//    fetch('http://localhost:8080/elaborazioniflussi_finsoft/resources/flussi/' + idFlusso, {
-//        method: 'put',
-//
-//        headers: {
-//            'Accept': 'application/json',
-//            'Content-Type': 'application/json'
-//        },
-//
-//        body: JSON.stringify(obj)
-//
-//    }).then(function (response) {
-//        console.log("response:", response)
-//        console.log("response.text():", response.text())
-//        
-//        caricaFlusso()
-//      
-//        return;
-//    }).catch(res => console.error("ERRORE:", res))
-//
-//
-//}
+//new App();
+
+
+
+

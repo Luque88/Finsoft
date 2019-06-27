@@ -66,10 +66,5 @@ public class FlussoResource {
 
 	}
 
-//	@POST
-//	@Path("/records")
-//	@Produces(MediaType.APPLICATION_JSON)
-//	public Flusso addRecords () {
-//		return flussoStore.addRecords();
-//	}
+
 }

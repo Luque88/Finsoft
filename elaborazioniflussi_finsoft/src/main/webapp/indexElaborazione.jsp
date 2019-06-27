@@ -31,7 +31,10 @@
 			<input type = "text" id="utente">
 			
 			<input type="button" class="pure-button pure-button-primary"
-					id="b_modElaborazione" value="Inserisci"> <br>
+					id="b_insElaborazione" value="Inserisci"> 
+							
+			<input type="button" class="pure-button pure-button-primary"
+					id="b_elimElaborazione" value="Elimina">					
 		</fieldset>
 	</form>
 	<div id="miaTabella1"></div>

@@ -5,8 +5,9 @@ export default class VersioneService extends AbstractService {
 		this.url = this.baseUrl + '/versioni'
 	}
 	
-	async all (start, page){
-		const data = await fetch (this.url + '?start=${start}&page=${page}',{
+	async all (){
+		console.log(this.url);
+		const versione = await fetch (this.url,{
 			method: 'get',
 			headers : {
 				'Accept': 'application/json'
@@ -14,11 +15,11 @@ export default class VersioneService extends AbstractService {
 		})
 			.then (response =>response.json())
 			.catch (res => console.error(res))
-		return data;
+		return versione;
 	}
 	
 	async find (url){
-		const data = await fetch (url,{
+		const versione = await fetch (url,{
 			method: 'get',
 			headers : {
 				'Accept': 'application/json'
@@ -26,7 +27,7 @@ export default class VersioneService extends AbstractService {
 		})
 			.then (response => response.json())
 			.catch ( res => console.error (res))
-		return data;
+		return versione;
 	}
 	
 	create (json){

@@ -38,6 +38,7 @@
 			</fieldset>
 		</form>
 		<div id="miaTabella"></div>
+		<div id="aggFlussi"></div>
 	
 	</article>
 	
@@ -52,6 +53,7 @@
 	
 	
 	<script src="js/DisegnaTabella.js" type="text/javascript"></script>
-	<script src="js/indexFlusso.js" type="text/javascript"></script>
+<!-- 	<script src="js/indexFlusso.js" type="text/javascript"></script> -->
+	<script src="js/flussi.js" type="text/javascript"></script>
 </body>
 </html>

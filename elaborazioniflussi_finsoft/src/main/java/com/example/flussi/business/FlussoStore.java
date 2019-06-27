@@ -67,32 +67,8 @@ public class FlussoStore {
 		flusso = this.addFlusso(flusso);
 		return flusso;
 
-	}
+		}
 
-//	public Flusso addRecords() {
-//		
-//			String[] a = { "a", "e", "i", "o", "u" };
-//
-//			for (int i = 0; i <5; i++) {	
-//
-//				String tabella = "";
-//
-//				for (int j = 0; j < a.length; j++) {
-//					int casuale = (int) (Math.random()*5);
-//					tabella = tabella + a[casuale];
-//					
-//					
-//				}
-//				Flusso flusso = new Flusso();
-//				flusso.setTabella(tabella);
-//				flusso= this.addFlusso(flusso);
-//				return flusso;
-//
-//			}
-//			return null;
-//			
-//		
-//
-//		}
+
 	}
 

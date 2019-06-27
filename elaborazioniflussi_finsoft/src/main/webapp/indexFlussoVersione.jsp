@@ -32,7 +32,10 @@
 					<input type ="text" id="versione">
 					
 					<input type="button" class="pure-button pure-button-primary"
-					id="b_modFlussoVersione" value="Inserisci"> <br>
+							id="b_insFlussoVersione" value="Inserisci"> 
+					
+					<input type="button" class="pure-button pure-button-primary"
+							id="b_elimFlussoVersione" value="Elimina">
 				</fieldset>
 			</form>
 			<div id="miaTabella2"></div>

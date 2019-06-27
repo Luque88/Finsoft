@@ -23,12 +23,12 @@ export default class Paginator {
 		this._checkButtons();
 	}
 	
-	_lastPage (){
+	_lastPage(){
 		let p = Math.floor(this.count / this.page);
 		return this.count % this.page !== 0 ? p + 1 : p;
 	}
 	
-	_create (){
+	_create(){
 		this.first = this._createButton("btnFirst", "First", this._onFirst);
 		this.prev = this._createButton ("btnFirst", "Prev", this._onPrev);
 		this.next = this._createButton ("btnFirst", "Next", this._onNext);
@@ -55,7 +55,7 @@ export default class Paginator {
 		this.next.classList.toggle("pure-button-disabled", this.current == this.lastPage);
 		this.last.classList.toggle("pure-button-disabled", this.current == this.lastPage);
 	}
-	_onFirst (){
+	_onFirst(){
 		this.current = 1;
 	}
 	_onPrev(e){
